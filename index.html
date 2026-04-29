@@ -14,8 +14,11 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="nav__logo">
-        <span class="logo-gators">GATORS</span>
-        <span class="logo-sub">Touch Rugby · Ganshoren</span>
+        <img src="images/logo-transparent.png" alt="Gators Logo" class="nav__logo-img" />
+        <div class="nav__logo-text">
+          <span class="logo-gators">GATORS</span>
+          <span class="logo-sub">Touch Rugby · Ganshoren</span>
+        </div>
       </a>
       <nav class="nav__links">
         <a href="#home">Home</a>
@@ -40,8 +43,14 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero__bg"></div>
+    <div class="hero__bg">
+      <img src="images/hero.jpg" alt="Touch rugby action" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
     <div class="hero__content">
+      <div class="hero__logo-wrap">
+        <img src="images/logo-transparent.png" alt="Gators Touch Rugby" class="hero__logo" />
+      </div>
       <p class="hero__eyebrow">Est. 2025 · Brussels, Belgium</p>
       <h1 class="hero__title">Ganshoren<br/><span>Touch Rugby</span></h1>
       <p class="hero__sub">Friendly. Dynamic. Inclusive. Come play with the Gators.</p>
@@ -50,9 +59,7 @@
         <a href="#about" class="btn btn--ghost">Learn More</a>
       </div>
     </div>
-    <div class="hero__scroll">
-      <span></span>
-    </div>
+    <div class="hero__scroll"><span></span></div>
   </section>
 
   <!-- HIGHLIGHTS BAR -->
@@ -62,14 +69,17 @@
         <span class="highlights__icon">🏉</span>
         <span>Mixed 6-a-side</span>
       </div>
+      <div class="highlights__sep"></div>
       <div class="highlights__item">
         <span class="highlights__icon">📍</span>
         <span>Albertpark, Ganshoren</span>
       </div>
+      <div class="highlights__sep"></div>
       <div class="highlights__item">
         <span class="highlights__icon">🗓️</span>
         <span>Thu evenings &amp; Sat mornings</span>
       </div>
+      <div class="highlights__sep"></div>
       <div class="highlights__item">
         <span class="highlights__icon">🎉</span>
         <span>1 month free trial</span>
@@ -88,22 +98,26 @@
           <p>Whether you're an experienced rugby player or have never touched a ball in your life, you'll find a place with us. We believe sport is for everyone, and we're here to prove it.</p>
           <a href="#contact" class="btn btn--primary">Get Started Free</a>
         </div>
-        <div class="about__cards">
-          <div class="card card--green">
-            <div class="card__num">6</div>
-            <div class="card__label">Players per team<br/><small>3 women · 3 men</small></div>
+        <div class="about__image-block">
+          <div class="about__img-main">
+            <img src="images/team.jpg" alt="Gators team playing touch rugby" />
           </div>
-          <div class="card card--dark">
-            <div class="card__num">0</div>
-            <div class="card__label">Tackling — it's touch!</div>
+          <div class="about__img-badge">
+            <img src="images/logo-green.png" alt="Gators badge" />
           </div>
-          <div class="card card--green">
-            <div class="card__num">∞</div>
-            <div class="card__label">Fun guaranteed</div>
-          </div>
-          <div class="card card--dark">
-            <div class="card__num">1</div>
-            <div class="card__label">Month free to try</div>
+          <div class="about__stats">
+            <div class="stat">
+              <div class="stat__num">6</div>
+              <div class="stat__label">Players per side</div>
+            </div>
+            <div class="stat stat--alt">
+              <div class="stat__num">3+3</div>
+              <div class="stat__label">Women &amp; Men</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">1mo</div>
+              <div class="stat__label">Free trial</div>
+            </div>
           </div>
         </div>
       </div>
@@ -112,42 +126,79 @@
 
   <!-- THE SPORT -->
   <section class="section sport" id="sport">
-    <div class="container">
-      <p class="section__eyebrow center">The Game</p>
-      <h2 class="section__title center">What is Touch Rugby?</h2>
-      <p class="section__lead center">Touch rugby is a fast-paced, non-contact variant of rugby where tackles are replaced by touches. Easy to learn, hard to put down.</p>
-      <div class="rules__grid">
-        <div class="rule">
-          <div class="rule__icon">✋</div>
-          <h3>Touch, Don't Tackle</h3>
-          <p>Instead of bringing opponents to the ground, you simply touch them. Safe, fair, and open to all.</p>
-        </div>
-        <div class="rule">
-          <div class="rule__icon">6️⃣</div>
-          <h3>Six-Touch Rule</h3>
-          <p>A team can be touched up to six times before possession changes — just like tackles in traditional rugby.</p>
-        </div>
-        <div class="rule">
-          <div class="rule__icon">↩️</div>
-          <h3>Backward Passes Only</h3>
-          <p>Passes must go backward or sideways — no forward passes allowed. Build your attack from behind.</p>
-        </div>
-        <div class="rule">
-          <div class="rule__icon">⚡</div>
-          <h3>Fast &amp; Inclusive</h3>
-          <p>Mixed teams of 6 (3 women, 3 men) keep the game balanced, inclusive, and exciting for all.</p>
+    <div class="sport__split">
+      <div class="sport__image">
+        <img src="images/action.jpg" alt="Touch rugby players in action" />
+        <div class="sport__image-caption">Fast. Inclusive. Fun.</div>
+      </div>
+      <div class="sport__content">
+        <p class="section__eyebrow">The Game</p>
+        <h2 class="section__title">What is Touch Rugby?</h2>
+        <p class="sport__lead">Touch rugby is a fast-paced, non-contact variant of rugby where tackles are replaced by a simple touch. Easy to learn, impossible to put down.</p>
+        <div class="rules__list">
+          <div class="rule">
+            <div class="rule__icon">✋</div>
+            <div class="rule__body">
+              <h3>Touch, Don't Tackle</h3>
+              <p>Players touch opponents instead of bringing them to the ground — safe and open to everyone.</p>
+            </div>
+          </div>
+          <div class="rule">
+            <div class="rule__icon">6️⃣</div>
+            <div class="rule__body">
+              <h3>Six-Touch Rule</h3>
+              <p>A team retains possession through up to six touches before it changes hands.</p>
+            </div>
+          </div>
+          <div class="rule">
+            <div class="rule__icon">↩️</div>
+            <div class="rule__body">
+              <h3>Backward Passes Only</h3>
+              <p>Passes must travel backward or sideways — no forward passes allowed.</p>
+            </div>
+          </div>
+          <div class="rule">
+            <div class="rule__icon">⚡</div>
+            <div class="rule__body">
+              <h3>Mixed &amp; Inclusive</h3>
+              <p>Teams of 6 with 3 women and 3 men keep every game balanced and exciting.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="photo-strip__item">
+      <img src="images/hero.jpg" alt="Rugby match" />
+    </div>
+    <div class="photo-strip__item">
+      <img src="images/ball.jpg" alt="Rugby ball" />
+    </div>
+    <div class="photo-strip__item">
+      <img src="images/team.jpg" alt="Team" />
+    </div>
+    <div class="photo-strip__item">
+      <img src="images/field.jpg" alt="Playing field" />
+    </div>
+    <div class="photo-strip__item">
+      <img src="images/action.jpg" alt="Action" />
+    </div>
+    <div class="photo-strip__item">
+      <img src="images/mixed.jpg" alt="Mixed team sport" />
+    </div>
+  </div>
+
   <!-- SCHEDULE -->
   <section class="section schedule" id="schedule">
     <div class="container">
       <p class="section__eyebrow center">When &amp; Where</p>
-      <h2 class="section__title center">Training Schedule</h2>
+      <h2 class="section__title center" style="color:#fff;">Training Schedule</h2>
       <div class="schedule__grid">
         <div class="schedule__card">
+          <div class="schedule__icon">🏃</div>
           <div class="schedule__day">Thursday</div>
           <div class="schedule__type">Training Session</div>
           <div class="schedule__time">19:00 – 20:30</div>
@@ -158,7 +209,12 @@
             1083 Ganshoren
           </div>
         </div>
+        <div class="schedule__img">
+          <img src="images/field.jpg" alt="Our playing field at Albertpark" />
+          <div class="schedule__img-label">Les Tarins · Albertpark · Ganshoren</div>
+        </div>
         <div class="schedule__card schedule__card--alt">
+          <div class="schedule__icon">🏆</div>
           <div class="schedule__day">Saturday</div>
           <div class="schedule__type">Match Day</div>
           <div class="schedule__time">09:30 – 11:00</div>
@@ -181,13 +237,17 @@
   </section>
 
   <!-- JOIN / TRIAL -->
-  <section class="section trial">
+  <section class="trial">
+    <div class="trial__bg">
+      <img src="images/mixed.jpg" alt="Come play with us" />
+      <div class="trial__overlay"></div>
+    </div>
     <div class="container trial__inner">
       <div class="trial__text">
         <h2>Try it free for a month</h2>
         <p>New to the club? We offer your first month completely free. No commitment, no pressure — just come and play.</p>
       </div>
-      <a href="#contact" class="btn btn--primary btn--lg">Claim Your Free Month</a>
+      <a href="#contact" class="btn btn--white btn--lg">Claim Your Free Month</a>
     </div>
   </section>
 
@@ -198,6 +258,9 @@
       <h2 class="section__title center">Join the Gators</h2>
       <div class="contact__grid">
         <div class="contact__info">
+          <div class="contact__logo">
+            <img src="images/logo.png" alt="Gators" />
+          </div>
           <h3>Contact us</h3>
           <p>Have questions or want to sign up? Reach out and we'll get back to you quickly.</p>
           <ul class="contact__list">
@@ -211,7 +274,7 @@
             </li>
             <li>
               <span class="contact__icon">📘</span>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook Community</a>
             </li>
             <li>
               <span class="contact__icon">📷</span>
@@ -249,8 +312,11 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="logo-gators">GATORS</span>
-        <span class="footer__tagline">Touch Rugby · Ganshoren · Brussels</span>
+        <img src="images/logo-transparent.png" alt="Gators" class="footer__logo" />
+        <div>
+          <span class="logo-gators">GATORS</span>
+          <span class="footer__tagline">Touch Rugby · Ganshoren · Brussels</span>
+        </div>
       </div>
       <div class="footer__links">
         <a href="#home">Home</a>
@@ -261,10 +327,10 @@
       </div>
       <div class="footer__social">
         <a href="https://www.instagram.com/ganshoren_touch_rugby" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </a>
         <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
       </div>
     </div>
