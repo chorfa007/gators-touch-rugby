@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gators Touch Rugby – Ganshoren, Brussels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="logo-gators">GATORS</span>
+        <span class="logo-sub">Touch Rugby · Ganshoren</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#sport">The Sport</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--nav">Join Us</a>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#home" onclick="closeMobile()">Home</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#sport" onclick="closeMobile()">The Sport</a>
+      <a href="#schedule" onclick="closeMobile()">Schedule</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Est. 2025 · Brussels, Belgium</p>
+      <h1 class="hero__title">Ganshoren<br/><span>Touch Rugby</span></h1>
+      <p class="hero__sub">Friendly. Dynamic. Inclusive. Come play with the Gators.</p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">Join the Team</a>
+        <a href="#about" class="btn btn--ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS BAR -->
+  <div class="highlights">
+    <div class="highlights__inner">
+      <div class="highlights__item">
+        <span class="highlights__icon">🏉</span>
+        <span>Mixed 6-a-side</span>
+      </div>
+      <div class="highlights__item">
+        <span class="highlights__icon">📍</span>
+        <span>Albertpark, Ganshoren</span>
+      </div>
+      <div class="highlights__item">
+        <span class="highlights__icon">🗓️</span>
+        <span>Thu evenings &amp; Sat mornings</span>
+      </div>
+      <div class="highlights__item">
+        <span class="highlights__icon">🎉</span>
+        <span>1 month free trial</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <p class="section__eyebrow">Who we are</p>
+          <h2 class="section__title">Welcome to the Gators</h2>
+          <p>Founded in 2025, the Gators are a vibrant and welcoming touch rugby club based in Ganshoren, Brussels. Our name draws inspiration from the Ganshoren marsh — rugged, tenacious, and always ready to play.</p>
+          <p>Whether you're an experienced rugby player or have never touched a ball in your life, you'll find a place with us. We believe sport is for everyone, and we're here to prove it.</p>
+          <a href="#contact" class="btn btn--primary">Get Started Free</a>
+        </div>
+        <div class="about__cards">
+          <div class="card card--green">
+            <div class="card__num">6</div>
+            <div class="card__label">Players per team<br/><small>3 women · 3 men</small></div>
+          </div>
+          <div class="card card--dark">
+            <div class="card__num">0</div>
+            <div class="card__label">Tackling — it's touch!</div>
+          </div>
+          <div class="card card--green">
+            <div class="card__num">∞</div>
+            <div class="card__label">Fun guaranteed</div>
+          </div>
+          <div class="card card--dark">
+            <div class="card__num">1</div>
+            <div class="card__label">Month free to try</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SPORT -->
+  <section class="section sport" id="sport">
+    <div class="container">
+      <p class="section__eyebrow center">The Game</p>
+      <h2 class="section__title center">What is Touch Rugby?</h2>
+      <p class="section__lead center">Touch rugby is a fast-paced, non-contact variant of rugby where tackles are replaced by touches. Easy to learn, hard to put down.</p>
+      <div class="rules__grid">
+        <div class="rule">
+          <div class="rule__icon">✋</div>
+          <h3>Touch, Don't Tackle</h3>
+          <p>Instead of bringing opponents to the ground, you simply touch them. Safe, fair, and open to all.</p>
+        </div>
+        <div class="rule">
+          <div class="rule__icon">6️⃣</div>
+          <h3>Six-Touch Rule</h3>
+          <p>A team can be touched up to six times before possession changes — just like tackles in traditional rugby.</p>
+        </div>
+        <div class="rule">
+          <div class="rule__icon">↩️</div>
+          <h3>Backward Passes Only</h3>
+          <p>Passes must go backward or sideways — no forward passes allowed. Build your attack from behind.</p>
+        </div>
+        <div class="rule">
+          <div class="rule__icon">⚡</div>
+          <h3>Fast &amp; Inclusive</h3>
+          <p>Mixed teams of 6 (3 women, 3 men) keep the game balanced, inclusive, and exciting for all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="section schedule" id="schedule">
+    <div class="container">
+      <p class="section__eyebrow center">When &amp; Where</p>
+      <h2 class="section__title center">Training Schedule</h2>
+      <div class="schedule__grid">
+        <div class="schedule__card">
+          <div class="schedule__day">Thursday</div>
+          <div class="schedule__type">Training Session</div>
+          <div class="schedule__time">19:00 – 20:30</div>
+          <div class="schedule__venue">
+            <strong>Les Tarins</strong><br/>
+            Albertpark<br/>
+            Av. Mathieu De Jonge 42<br/>
+            1083 Ganshoren
+          </div>
+        </div>
+        <div class="schedule__card schedule__card--alt">
+          <div class="schedule__day">Saturday</div>
+          <div class="schedule__type">Match Day</div>
+          <div class="schedule__time">09:30 – 11:00</div>
+          <div class="schedule__venue">
+            <strong>Les Tarins</strong><br/>
+            Albertpark<br/>
+            Av. Mathieu De Jonge 42<br/>
+            1083 Ganshoren
+          </div>
+        </div>
+      </div>
+      <div class="schedule__map">
+        <iframe
+          title="Gators location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5!2d4.316!3d50.872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDUyJzE5LjIiTiA0wrAxOScwMi41IkU!5e0!3m2!1sen!2sbe!4v1"
+          width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN / TRIAL -->
+  <section class="section trial">
+    <div class="container trial__inner">
+      <div class="trial__text">
+        <h2>Try it free for a month</h2>
+        <p>New to the club? We offer your first month completely free. No commitment, no pressure — just come and play.</p>
+      </div>
+      <a href="#contact" class="btn btn--primary btn--lg">Claim Your Free Month</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <p class="section__eyebrow center">Get in Touch</p>
+      <h2 class="section__title center">Join the Gators</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <h3>Contact us</h3>
+          <p>Have questions or want to sign up? Reach out and we'll get back to you quickly.</p>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__icon">✉️</span>
+              <a href="mailto:ganshorentouchrugby@gmail.com">ganshorentouchrugby@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact__icon">📍</span>
+              <span>Av. Mathieu De Jonge 42, 1083 Ganshoren</span>
+            </li>
+            <li>
+              <span class="contact__icon">📘</span>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+            </li>
+            <li>
+              <span class="contact__icon">📷</span>
+              <a href="https://www.instagram.com/ganshoren_touch_rugby" target="_blank" rel="noopener">@ganshoren_touch_rugby</a>
+            </li>
+          </ul>
+        </div>
+        <form class="contact__form" onsubmit="handleSubmit(event)">
+          <div class="form__row">
+            <div class="form__group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Jean" required />
+            </div>
+            <div class="form__group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Dupont" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form__group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="I'd like to join the free trial..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form__note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo-gators">GATORS</span>
+        <span class="footer__tagline">Touch Rugby · Ganshoren · Brussels</span>
+      </div>
+      <div class="footer__links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#sport">The Sport</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/ganshoren_touch_rugby" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Gators Touch Rugby – Ganshoren. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
