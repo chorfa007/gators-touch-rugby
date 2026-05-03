@@ -22,17 +22,65 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('.card, .rule, .schedule__card, .about__text, .contact__info, .contact__form')
   .forEach(el => { el.classList.add('fade-up'); observer.observe(el); });
 
-// Contact form
+// ── i18n ──────────────────────────────────────────────────────────────────────
+const SUPPORTED = ['en', 'fr', 'nl'];
+
+function detectLang() {
+  const stored = localStorage.getItem('lang');
+  if (stored && SUPPORTED.includes(stored)) return stored;
+  const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+  return SUPPORTED.includes(browser) ? browser : 'en';
+}
+
+let currentLang = detectLang();
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+
+  const t = TRANSLATIONS[lang];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.dataset.i18nPh;
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+applyLang(currentLang);
+
+// ── Contact form ───────────────────────────────────────────────────────────────
 function handleSubmit(e) {
   e.preventDefault();
   const note = document.getElementById('formNote');
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
+  const btn  = e.target.querySelector('button[type="submit"]');
+  const t    = TRANSLATIONS[currentLang];
+
+  btn.textContent = t.form_sending;
   btn.disabled = true;
+
   setTimeout(() => {
-    note.textContent = '✓ Message sent! We\'ll get back to you soon.';
+    note.textContent = t.form_success;
     e.target.reset();
-    btn.textContent = 'Send Message';
+    btn.textContent = t.form_submit;
     btn.disabled = false;
+    // Restore translated placeholders after form reset
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.dataset.i18nPh;
+      if (t[key] !== undefined) el.placeholder = t[key];
+    });
   }, 1000);
 }
