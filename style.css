@@ -204,6 +204,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   overflow: hidden;
+  background: #071a0d;
 }
 .hero__bg {
   position: absolute;
